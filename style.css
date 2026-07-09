@@ -817,7 +817,8 @@ section {
 
 /* How It Works Timeline */
 .how-it-works {
-    margin-top: 100px;
+    margin-top: 0;
+    margin-bottom: 100px;
 }
 
 .timeline-container {
@@ -1149,9 +1150,9 @@ section {
     opacity: 0.5;
 }
 
-/* --- Section 4: Speakers --- */
-.speakers-section {
-    background-color: var(--color-bg-dark);
+/* --- Section 4: Speakers Area --- */
+.speakers-area {
+    margin-bottom: 100px;
 }
 
 .speakers-grid {
@@ -1410,7 +1411,7 @@ section {
 .map-icons-grid {
     position: relative;
     height: 480px; /* Tall enough to display the full map of India shape */
-    background-image: url('india-map.jpg');
+    background-image: url('images/india-map.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
