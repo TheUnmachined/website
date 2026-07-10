@@ -281,9 +281,10 @@ section {
 }
 
 .logo-img {
-    width: 24px;
-    height: 24px;
+    width: 32px;
+    height: 32px;
     object-fit: contain;
+    border-radius: 50%;
 }
 
 .logo-text {
@@ -1513,8 +1514,9 @@ section {
 .patron-logo-img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: 16px;
+    background-color: #ffffff;
 }
 
 .patron-card h3 {
@@ -1738,8 +1740,17 @@ section {
     font-weight: 700;
     color: #ffffff;
     text-decoration: none;
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    gap: 10px;
     margin-bottom: 12px;
+}
+
+.footer-logo-img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    border-radius: 50%;
 }
 
 .footer-tagline {
