@@ -1411,11 +1411,13 @@ section {
 
 .map-icons-grid {
     position: relative;
-    height: 480px; /* Tall enough to display the full map of India shape */
-    background-image: url('images/india-map.jpg');
+    width: 100%;
+    aspect-ratio: 1376 / 768;
+    height: auto;
+    background-image: url('images/world-map.jpg');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
+    background-size: 100% 100%;
     border-radius: 12px;
     border: 1px solid rgba(124, 58, 237, 0.06);
     background-color: #faf9ff;
@@ -1428,33 +1430,37 @@ section {
     top: var(--y);
     display: flex;
     align-items: center;
-    gap: 8px;
-    background: rgba(255, 255, 255, 0.9);
-    border: 1px solid rgba(124, 58, 237, 0.2);
-    padding: 6px 12px;
-    border-radius: var(--border-radius-pill);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    transform: translate(-50%, -50%);
+    gap: 5px;
+    background: transparent;
+    border: none;
+    padding: 0;
+    transform: translate(-12px, -30px);
     transition: transform var(--transition-fast);
 }
 
 .map-city-tag:hover {
-    transform: translate(-50%, -50%) scale(1.08);
-    background: #ffffff;
+    transform: translate(-12px, -30px) scale(1.08);
+    background: transparent;
 }
 
-.city-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background-color: var(--color-violet);
-    display: block;
+.city-pin-icon {
+    width: 24px;
+    height: 32px;
+    flex-shrink: 0;
+    filter: drop-shadow(0 3px 6px rgba(124, 58, 237, 0.35));
 }
 
 .city-name {
-    font-size: 0.75rem;
-    font-weight: 600;
+    font-size: 0.9rem;
+    font-weight: 700;
     color: var(--color-text-light);
+    text-shadow:
+        -1.5px -1.5px 0 #faf9ff,
+         1.5px -1.5px 0 #faf9ff,
+        -1.5px  1.5px 0 #faf9ff,
+         1.5px  1.5px 0 #faf9ff,
+         0 2px 6px rgba(255, 255, 255, 0.9);
+    margin-bottom: 8px;
 }
 
 .impact-update-strip {
@@ -2194,15 +2200,22 @@ section {
     }
 
     .map-icons-grid {
-        height: 280px;
+        height: auto;
     }
 
     .map-city-tag {
-        padding: 4px 8px;
+        padding: 0;
+        transform: translate(-9px, -22px);
+    }
+
+    .city-pin-icon {
+        width: 18px;
+        height: 24px;
     }
 
     .city-name {
-        font-size: 10px;
+        font-size: 11px;
+        margin-bottom: 5px;
     }
 
     /* Footer mobile flow */
