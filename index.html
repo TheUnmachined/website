@@ -621,12 +621,115 @@
 
                 <!-- Testimonial Cards -->
                 <h3 class="subsection-title text-center" style="margin-top: 4rem;">What participants said</h3>
-                <div class="testimonials-placeholder">
-                    <div class="testimonial-placeholder-card">
-                        <p class="testimonial-placeholder-text">The first voices will appear here on 29 July 2026 — the
-                            morning after Session 1. Come back then.</p>
+                <div class="voices" id="voices">
+                    <!-- Featured spotlight (filled by the small script below) -->
+                    <article class="voice-spotlight" id="voice-spotlight" style="--c: var(--color-yellow);" aria-live="polite">
+                        <div class="voice-spotlight-photo">
+                            <img id="voice-photo" src="images/p_boy1.png" alt="Tanav G.">
+                        </div>
+                        <div class="voice-spotlight-body">
+                            <span class="voice-session-pill" id="voice-session">Session 1 · Global Business Communication</span>
+                            <p class="voice-quote" id="voice-quote">Feedback from Tanav G. will be shared here soon.</p>
+                            <h4 class="voice-name" id="voice-name">Tanav G.</h4>
+                            <span class="voice-meta" id="voice-meta">Chandigarh · Session 1 Participant</span>
+                        </div>
+                    </article>
+
+                    <!-- Participant carousel: 6 visible at a time, scroll for more -->
+                    <div class="voice-carousel">
+                        <button type="button" class="voice-arrow" id="voice-prev" aria-label="Previous participants">&#8249;</button>
+                        <div class="voice-track" id="voice-track">
+                            <button type="button" class="voice-thumb active" style="--c: var(--color-yellow);" data-name="Tanav G." data-city="Chandigarh" data-session="1" data-session-title="Global Business Communication" data-img="images/p_boy1.png" data-quote="">
+                                <img src="images/p_boy1.png" alt="Tanav G." loading="lazy">
+                                <span class="voice-thumb-name">Tanav G.</span>
+                                <span class="voice-thumb-meta">Chandigarh · Session 1</span>
+                            </button>
+                            <button type="button" class="voice-thumb" style="--c: var(--color-yellow);" data-name="Hussain B." data-city="Bhavnagar" data-session="1" data-session-title="Global Business Communication" data-img="images/p_boy2.png" data-quote="">
+                                <img src="images/p_boy2.png" alt="Hussain B." loading="lazy">
+                                <span class="voice-thumb-name">Hussain B.</span>
+                                <span class="voice-thumb-meta">Bhavnagar · Session 1</span>
+                            </button>
+                            <button type="button" class="voice-thumb" style="--c: var(--color-yellow);" data-name="Zainab L." data-city="Bhavnagar" data-session="1" data-session-title="Global Business Communication" data-img="images/p_girl1.png" data-quote="">
+                                <img src="images/p_girl1.png" alt="Zainab L." loading="lazy">
+                                <span class="voice-thumb-name">Zainab L.</span>
+                                <span class="voice-thumb-meta">Bhavnagar · Session 1</span>
+                            </button>
+                            <button type="button" class="voice-thumb" style="--c: var(--color-yellow);" data-name="Kulsum V." data-city="Bhavnagar" data-session="1" data-session-title="Global Business Communication" data-img="images/p_girl2.png" data-quote="">
+                                <img src="images/p_girl2.png" alt="Kulsum V." loading="lazy">
+                                <span class="voice-thumb-name">Kulsum V.</span>
+                                <span class="voice-thumb-meta">Bhavnagar · Session 1</span>
+                            </button>
+                            <button type="button" class="voice-thumb" style="--c: var(--color-cyan);" data-name="Umang P." data-city="Bhavnagar" data-session="2" data-session-title="Critical Thinking" data-img="images/p_umang.png" data-quote="">
+                                <img src="images/p_umang.png" alt="Umang P." loading="lazy">
+                                <span class="voice-thumb-name">Umang P.</span>
+                                <span class="voice-thumb-meta">Bhavnagar · Session 2</span>
+                            </button>
+                            <button type="button" class="voice-thumb" style="--c: var(--color-cyan);" data-name="Ammar C." data-city="Bhavnagar" data-session="2" data-session-title="Critical Thinking" data-img="images/p_ammar.png" data-quote="">
+                                <img src="images/p_ammar.png" alt="Ammar C." loading="lazy">
+                                <span class="voice-thumb-name">Ammar C.</span>
+                                <span class="voice-thumb-meta">Bhavnagar · Session 2</span>
+                            </button>
+                            <button type="button" class="voice-thumb" style="--c: var(--color-cyan);" data-name="Issa S." data-city="Lisbon" data-session="2" data-session-title="Critical Thinking" data-img="images/p_issa.png" data-quote="">
+                                <img src="images/p_issa.png" alt="Issa S." loading="lazy">
+                                <span class="voice-thumb-name">Issa S.</span>
+                                <span class="voice-thumb-meta">Lisbon · Session 2</span>
+                            </button>
+                            <button type="button" class="voice-thumb" style="--c: var(--color-green);" data-name="Mallika V." data-city="Dubai" data-session="3" data-session-title="Ethics in Business" data-img="images/p_mallika.png" data-quote="">
+                                <img src="images/p_mallika.png" alt="Mallika V." loading="lazy">
+                                <span class="voice-thumb-name">Mallika V.</span>
+                                <span class="voice-thumb-meta">Dubai · Session 3</span>
+                            </button>
+                            <button type="button" class="voice-thumb" style="--c: var(--color-green);" data-name="Aliraza" data-city="Bhavnagar" data-session="3" data-session-title="Ethics in Business" data-img="images/p_aliraza.png" data-quote="">
+                                <img src="images/p_aliraza.png" alt="Aliraza" loading="lazy">
+                                <span class="voice-thumb-name">Aliraza</span>
+                                <span class="voice-thumb-meta">Bhavnagar · Session 3</span>
+                            </button>
+                            <button type="button" class="voice-thumb" style="--c: var(--color-green);" data-name="Wania A." data-city="Lisbon" data-session="3" data-session-title="Ethics in Business" data-img="images/p_wania.png" data-quote="">
+                                <img src="images/p_wania.png" alt="Wania A." loading="lazy">
+                                <span class="voice-thumb-name">Wania A.</span>
+                                <span class="voice-thumb-meta">Lisbon · Session 3</span>
+                            </button>
+                        </div>
+                        <button type="button" class="voice-arrow voice-arrow-next" id="voice-next" aria-label="Next participants">&#8250;</button>
                     </div>
                 </div>
+                <script>
+                    (function () {
+                        var spot = document.getElementById('voice-spotlight');
+                        var track = document.getElementById('voice-track');
+                        if (!spot || !track) return;
+                        var thumbs = track.querySelectorAll('.voice-thumb');
+                        var prev = document.getElementById('voice-prev');
+                        var next = document.getElementById('voice-next');
+
+                        function show(t) {
+                            var name = t.getAttribute('data-name');
+                            var quote = t.getAttribute('data-quote');
+                            spot.style.setProperty('--c', getComputedStyle(t).getPropertyValue('--c'));
+                            var photo = document.getElementById('voice-photo');
+                            photo.src = t.getAttribute('data-img');
+                            photo.alt = name;
+                            document.getElementById('voice-session').textContent = 'Session ' + t.getAttribute('data-session') + ' · ' + t.getAttribute('data-session-title');
+                            document.getElementById('voice-quote').textContent = quote ? quote : 'Feedback from ' + name + ' will be shared here soon.';
+                            document.getElementById('voice-name').textContent = name;
+                            document.getElementById('voice-meta').textContent = t.getAttribute('data-city') + ' · Session ' + t.getAttribute('data-session') + ' Participant';
+                            thumbs.forEach(function (x) { x.classList.toggle('active', x === t); });
+                        }
+
+                        thumbs.forEach(function (t) { t.addEventListener('click', function () { show(t); }); });
+
+                        function step() { return (thumbs[0] ? thumbs[0].offsetWidth : 120) * 3; }
+                        function updateArrows() {
+                            prev.disabled = track.scrollLeft <= 2;
+                            next.disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 2;
+                        }
+                        prev.addEventListener('click', function () { track.scrollBy({ left: -step(), behavior: 'smooth' }); });
+                        next.addEventListener('click', function () { track.scrollBy({ left: step(), behavior: 'smooth' }); });
+                        track.addEventListener('scroll', updateArrows);
+                        window.addEventListener('resize', updateArrows);
+                        updateArrows();
+                    })();
+                </script>
 
                 <!-- Illustrated map icon grid -->
                 <div class="map-illustration-section">
